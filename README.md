@@ -1,6 +1,4 @@
-# preact-todo
-
-# Harry's Preact Todo List
+# Preact Todo List
 Playing around with Preact and doing a simple todo list using hooks, local state and functional components.
 
 ## CLI Commands
