@@ -6,12 +6,20 @@ const ToDo = () => {
 	const [todos, setTodos] = useState([]);
 	const [text, setText] = useState('');
 
+	const handleDelete = e => {
+		const { id } = e.target.parentElement;
+		todos.splice(id, 1);
+		setTodos([...todos]);
+	}
+
 	return (<div class={style.todo}>
 		<h1 class="title">ToDo</h1>
 
 		{todos.map((item, i) => {
 			return (<ul class="todoList">
-				<li key={i}>{item}</li>
+				<li key={i}>{item}
+					<button type="button" class={style.removeTodo} onClick={handleDelete}>X</button>
+				</li>
 			</ul>)
 		})}
 
